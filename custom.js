@@ -10,7 +10,7 @@ function showRequirement() {
     
     inputs.setAttribute("style", "display: block;")
 
-
+    document.getElementById('clipboard').setAttribute("style", "display: none;");
     document.getElementById('main-button').setAttribute("style", "display: none;");
     document.getElementById('generate-button').setAttribute("style", "display: block;");
 
@@ -26,7 +26,6 @@ document.getElementById('randomPasswordDisplay').innerHTML = "Please let me know
 function generate() {
 event.preventDefault();
     var lengthPass = document.getElementById('pass-length').value;
-    console.log(lengthPass);
     
 
 
