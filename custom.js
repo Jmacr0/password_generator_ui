@@ -130,7 +130,7 @@ event.preventDefault();
         document.getElementById('main-button').setAttribute("style", "display: block;");
         document.getElementById('clipboard').setAttribute("style", "display: block;");
         document.getElementById('generate-button').setAttribute("style", "display: none;");
-
+        
         document.getElementById("randomPasswordDisplay").innerHTML = finalPassword;
 
 
@@ -147,7 +147,7 @@ event.preventDefault();
 
 
 function copyToClipboard() {
-
+    document.getElementById("randomPasswordDisplay").removeAttribute("disabled");
     var copyText = document.getElementById("randomPasswordDisplay");
 
     //example from w3 schools
@@ -160,4 +160,7 @@ function copyToClipboard() {
     document.execCommand("copy")
 
     alert("Copied the password: " + copyText.value);
+    document.getElementById("randomPasswordDisplay").setAttribute("disabled", "");
 };
+
+
